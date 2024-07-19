@@ -22,10 +22,10 @@ spec:
     spec:
       containers:
         - name: demo-app-container
-          image: 'javaexpress/spring-docker-cicd:1.0.0-11'
+          image: 'javaexpress/spring-docker-cicd:latest'
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8080
+            - containerPort: 9090
 
 ---
 
@@ -40,5 +40,5 @@ spec:
   ports:
     - protocol: TCP
       port: 9092
-      targetPort: 8080
+      targetPort: 9090
   type: NodePort
